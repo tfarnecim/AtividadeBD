@@ -15,3 +15,5 @@ COMMIT;  #2
 COMMIT;  #1
 
 //consulta1  #1
+
+Consulta1: Faça a junção dos dados de Jogador e Equipe para o jogador cujo RG é 111111111.
