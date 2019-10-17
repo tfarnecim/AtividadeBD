@@ -1,3 +1,5 @@
+Exemplo com Read Commited, para fazer o outro exemplo basta trocar para Repeatable Read.
+
 BEGIN  #1
 SET TRANSACTION ISOLATION LEVEL READ COMMITED;  #1
 //consulta1  #1
