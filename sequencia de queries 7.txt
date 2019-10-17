@@ -17,3 +17,8 @@ COMMIT;  #1
 //consulta1  #1
 
 Consulta1: Faça a junção dos dados de Jogador e Equipe para o jogador cujo RG é 111111111.
+
+select j.RG, j.Nome, e.Nome from Equipe e
+join Jogador j
+on j.IdEquipe = e.IdEquipe
+where j.RG = 111111111;
