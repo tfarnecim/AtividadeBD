@@ -1,0 +1,17 @@
+begin 
+set transaction isolation level read commited;
+select Nome from Jogador where RG=111111111 //não sei se isso ta certo
+update Jogador set Nome = "JUNINHO" where RG=111111111;
+commit;
+
+begin 
+set transaction isolation level read serializable;
+select Nome from Jogador where RG=111111111 //não sei se isso ta certo
+update Jogador set Nome = "JUNINHO" where RG=111111111;
+commit;
+
+begin 
+set transaction isolation level read serializable;
+select Nome from Jogador where RG=111111111 //não sei se isso ta certo
+update Jogador set Nome = "JUNINHO" where RG=111111111;
+rollback;
