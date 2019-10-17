@@ -1,0 +1,15 @@
+BEGIN  #1
+SET TRANSACTION ISOLATION LEVEL READ COMMITED;  #1
+SELECT * FROM Jogador;  #1
+//Insira/Remova/Altere algo na tabela jogador #2
+SELECT * FROM Jogador;  #1
+COMMIT; #1
+
+//Para que não ocorra a leitura fantasma, basta usar o isolamento mais bem protegido de todos o :D
+
+BEGIN  #1
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  #1
+SELECT * FROM Jogador;  #1
+//Insira/Remova/Altere algo na tabela jogador #2
+SELECT * FROM Jogador;  #1
+COMMIT; #1
